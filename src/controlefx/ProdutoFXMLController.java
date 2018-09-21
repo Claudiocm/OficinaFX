@@ -80,10 +80,10 @@ public class ProdutoFXMLController implements Initializable {
             produtos.add(pro);
             produtoDao.salvar(pro);
             tabelaProduto.getItems().add(pro);
-            atualizarTabela();
-
             cancelar();
             alertas("Parabéns", "Produto atualizado com sucesso!");
+            atualizarTabela();
+
         } else {
             alertas("Atenção", "Selecione um Produto");
         }
