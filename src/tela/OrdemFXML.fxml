@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="584.0" prefWidth="628.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlefx.OrdemFXMLController">
+    <stylesheets>
+        <URL value="@/resource/ordemfxml.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="30.0" layoutY="32.0" text="Nº O.S:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="293.0" layoutY="32.0" text="Entrada:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="481.0" layoutY="107.0" text="Status:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="457.0" layoutY="32.0" text="Saida:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="68.0" text="Cliente:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="358.0" layoutY="68.0" text="Carro:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbOrdem" layoutX="81.0" layoutY="28.0" onAction="#preencheOS" prefHeight="25.0" prefWidth="113.0" promptText="Selecione ..." />
+      <ComboBox fx:id="cmbCliente" layoutX="80.0" layoutY="64.0" onAction="#preencheCliente" prefHeight="25.0" prefWidth="270.0" />
+      <ComboBox fx:id="cmbCarro" layoutX="398.0" layoutY="64.0" onAction="#preencheCarro" prefHeight="25.0" prefWidth="181.0" />
+      <DatePicker fx:id="dtpEntrada" layoutX="345.0" layoutY="28.0" prefHeight="25.0" prefWidth="104.0" />
+      <DatePicker fx:id="dtpSaida" layoutX="495.0" layoutY="28.0" prefHeight="25.0" prefWidth="104.0" />
+      <CheckBox fx:id="chkStatus" layoutX="527.0" layoutY="107.0" mnemonicParsing="false" text="Pago" />
+      <Label layoutX="317.0" layoutY="107.0" text="Total:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtValor" layoutX="354.0" layoutY="102.0" prefHeight="25.0" prefWidth="113.0" />
+      <TableView fx:id="tabelaItens" layoutX="24.0" layoutY="281.0" prefHeight="233.0" prefWidth="573.0">
+        <columns>
+          <TableColumn fx:id="columnCodigo" prefWidth="75.0" text="Código" />
+          <TableColumn fx:id="columnServico" prefWidth="298.0" text="Serviço" />
+            <TableColumn fx:id="columnQuantidade" prefWidth="94.0" text="Quantidade" />
+            <TableColumn fx:id="columnPreco" prefWidth="105.0" text="Preço" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnConfirmapedido" layoutX="495.0" layoutY="528.0" mnemonicParsing="false" onAction="#confirmar" prefHeight="25.0" prefWidth="104.0" text="Confirmar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNovo" layoutX="81.0" layoutY="149.0" mnemonicParsing="false" onAction="#novoPedido" prefHeight="25.0" prefWidth="77.0" text="Novo">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelar" layoutX="393.0" layoutY="528.0" mnemonicParsing="false" onAction="#cancelarNovaOrdem" prefHeight="25.0" prefWidth="87.0" text="Cancelar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="29.0" layoutY="238.0" text="Serviço:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="219.0" layoutY="238.0" text="Quantidade:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtQuantidade" layoutX="293.0" layoutY="234.0" prefHeight="25.0" prefWidth="70.0" />
+      <Button fx:id="btnInserirItem" layoutX="372.0" layoutY="234.0" mnemonicParsing="false" onAction="#inserirItens" prefHeight="25.0" prefWidth="70.0" text="Inserir">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="cmbServico" layoutX="79.0" layoutY="234.0" onAction="#preencheServico" prefHeight="25.0" prefWidth="132.0" />
+      <Button fx:id="btnLimpar" layoutX="525.0" layoutY="234.0" mnemonicParsing="false" onAction="#limparInserir" prefHeight="25.0" prefWidth="70.0" text="Limpar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Separator layoutX="4.0" layoutY="214.0" prefHeight="3.0" prefWidth="621.0" />
+      <Label layoutX="14.0" layoutY="106.0" text="Mecanico:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbMecanico" layoutX="81.0" layoutY="102.0" onAction="#preencheMecanico" prefHeight="25.0" prefWidth="228.0" />
+      <Button fx:id="btnRemover" layoutX="451.0" layoutY="234.0" mnemonicParsing="false" onAction="#removerItens" text="Remover">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSalvar" layoutX="168.0" layoutY="149.0" mnemonicParsing="false" onAction="#salvar" prefHeight="25.0" prefWidth="77.0" text="Salvar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnExcluir" layoutX="254.0" layoutY="149.0" mnemonicParsing="false" onAction="#excluir" prefHeight="25.0" prefWidth="77.0" text="Excluir">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnLimpar" layoutX="479.0" layoutY="149.0" mnemonicParsing="false" onAction="#limpar" prefHeight="25.0" prefWidth="96.0" text="Limpar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="340.0" layoutY="149.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="77.0" text="Editar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblNumero" layoutX="205.0" layoutY="32.0" text="Nº">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

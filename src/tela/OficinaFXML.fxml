@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="514.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlefx.OficinaFXMLController">
+   <children>
+      <MenuBar layoutX="-3.0" layoutY="1.0" prefHeight="517.0" prefWidth="877.0" style="-fx-background-color: #4682B4;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Inicio">
+            <items>
+              <MenuItem fx:id="menuSair" mnemonicParsing="false" onAction="#fecharTela" text="Sair" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Cadastro Geral">
+            <items>
+              <MenuItem fx:id="menuCliente" mnemonicParsing="false" onAction="#acessaCliente" text="Cliente" />
+                  <MenuItem fx:id="menuMecanico" mnemonicParsing="false" onAction="#acessaMecanico" text="Mecanico" />
+                  <MenuItem fx:id="menuCarro" mnemonicParsing="false" onAction="#acessaCarro" text="Carro" />
+                  <MenuItem fx:id="menuServico" mnemonicParsing="false" onAction="#acessaServico" text="Serviços" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Fornecimento">
+            <items>
+              <MenuItem fx:id="menuFornecedor" mnemonicParsing="false" onAction="#acessaFornecedor" text="Fornecedores" />
+                  <MenuItem fx:id="menuInsumos" mnemonicParsing="false" onAction="#acessaInsumos" text="Insumos" />
+                  <MenuItem fx:id="menuProdutos" mnemonicParsing="false" onAction="#acessaProduto" text="Produtos" />
+                  <MenuItem fx:id="menuRelatorio" mnemonicParsing="false" onAction="#acessaRelatorio" text="Relatório" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Negocios">
+               <items>
+                  <MenuItem fx:id="menuVenda" mnemonicParsing="false" onAction="#acessaVenda" text="Venda de Serviços" />
+                  <MenuItem fx:id="menuOrdemservico" mnemonicParsing="false" onAction="#acessaOrdem" text="Ordem de Serviços" />
+                  <MenuItem fx:id="menuCaixa" mnemonicParsing="false" onAction="#acessaCaixa" text="Caixa" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Fechamento">
+               <items>
+                  <MenuItem fx:id="menuFechamentos" mnemonicParsing="false" onAction="#acessaFechamentoCaixa" text="Fechar Caixa" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="496.0" fitWidth="872.0" layoutY="24.0" nodeOrientation="INHERIT" opacity="0.5" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="24.0">
+         <image>
+            <Image url="@../resource/mecanica.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

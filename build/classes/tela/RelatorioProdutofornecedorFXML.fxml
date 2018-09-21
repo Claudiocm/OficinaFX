@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="548.0" prefWidth="857.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controlefx.RelatorioProdutofornecedorController">
+   <children>
+      <PieChart fx:id="piechartfx" layoutX="14.0" layoutY="87.0" prefHeight="378.0" prefWidth="382.0" title="Quantidade" />
+      <LineChart layoutX="409.0" layoutY="87.0" prefHeight="400.0" prefWidth="418.0" title="Períodos">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <Button fx:id="btnGerar" layoutX="116.0" layoutY="487.0" mnemonicParsing="false" onAction="#geraRelatorio" text="Gerar Relatorio">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

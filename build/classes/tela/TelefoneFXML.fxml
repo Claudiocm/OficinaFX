@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="410.0" prefWidth="480.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controlefx.TelefoneFXMLController">
+   <children>
+      <Label layoutX="21.0" layoutY="29.0" text="Código:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="61.0" text="Numero:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="224.0" layoutY="61.0" text="Tipo:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="242.0" layoutY="29.0" text="Usuário:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigo" layoutX="68.0" layoutY="25.0" prefHeight="25.0" prefWidth="79.0" />
+      <ComboBox fx:id="cmbTipo" layoutX="256.0" layoutY="57.0" onAction="#preencheTipo" prefHeight="25.0" prefWidth="124.0" />
+      <ComboBox fx:id="cmbUsuario" layoutX="294.0" layoutY="25.0" onAction="#preencheUsuario" prefWidth="150.0" />
+      <Button fx:id="btnAdicionar" layoutX="68.0" layoutY="108.0" mnemonicParsing="false" onAction="#adicionar" prefHeight="25.0" prefWidth="79.0" text="Adicionar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnAlterar" layoutX="157.0" layoutY="108.0" mnemonicParsing="false" onAction="#alterar" prefHeight="25.0" prefWidth="79.0" text="Alterar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnExcluir" layoutX="248.0" layoutY="108.0" mnemonicParsing="false" onAction="#excluir" prefHeight="25.0" prefWidth="79.0" text="Excluir">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelar" layoutX="351.0" layoutY="108.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="25.0" prefWidth="91.0" text="Cancelar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtNumero" layoutX="68.0" layoutY="57.0" />
+      <TableView fx:id="tabelaTelefone" layoutX="68.0" layoutY="155.0" prefHeight="217.0" prefWidth="374.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Código" />
+          <TableColumn prefWidth="185.0" text="Telefone" />
+            <TableColumn prefWidth="112.0" text="Tipo" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

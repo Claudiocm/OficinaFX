@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="556.0" prefWidth="605.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlefx.CarroFXMLController">
+    <stylesheets>
+        <URL value="@/resource/carrofxml.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="21.0" layoutY="27.0" text="Código:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="59.0" text="Modelo:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="259.0" layoutY="59.0" text="Marca:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="344.0" layoutY="27.0" text="Placa:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="91.0" text="Chassi:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigo" layoutX="72.0" layoutY="23.0" prefHeight="25.0" prefWidth="76.0" />
+      <TextField fx:id="txtModelo" layoutX="72.0" layoutY="55.0" prefHeight="25.0" prefWidth="181.0" />
+      <TextField fx:id="txtMarca" layoutX="303.0" layoutY="55.0" prefHeight="25.0" prefWidth="163.0" />
+      <TextField fx:id="txtPlaca" layoutX="385.0" layoutY="23.0" prefHeight="25.0" prefWidth="114.0" />
+      <TextField fx:id="txtChassi" layoutX="72.0" layoutY="89.0" prefHeight="25.0" prefWidth="181.0" />
+      <Label layoutX="474.0" layoutY="59.0" text="Ano:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAno" layoutX="506.0" layoutY="55.0" prefHeight="25.0" prefWidth="70.0" />
+      <Label layoutX="259.0" layoutY="93.0" text="Proprietário:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="126.0" text="O.S:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbOS" layoutX="73.0" layoutY="122.0" onAction="#preencheOS" prefHeight="25.0" prefWidth="130.0" />
+      <Button fx:id="btnSalvar" layoutX="72.0" layoutY="169.0" mnemonicParsing="false" onAction="#salvarCarro" prefHeight="25.0" prefWidth="72.0" text="Salvar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnExcluir" layoutX="149.0" layoutY="169.0" mnemonicParsing="false" onAction="#excluirCarro" prefHeight="25.0" prefWidth="72.0" text="Excluir">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnAtualizar" layoutX="226.0" layoutY="169.0" mnemonicParsing="false" onAction="#AtualizarCarro" prefHeight="25.0" prefWidth="72.0" text="Atualizar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelar" layoutX="386.0" layoutY="169.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="25.0" prefWidth="76.0" text="Cancelar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="341.0" layoutY="126.0" text="Data:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtData" layoutX="376.0" layoutY="122.0" prefHeight="25.0" prefWidth="87.0" />
+      <Label layoutX="211.0" layoutY="126.0" text="Valor:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtValor" layoutX="249.0" layoutY="122.0" prefHeight="25.0" prefWidth="87.0" />
+      <TableView fx:id="tabelaCarro" layoutX="66.0" layoutY="225.0" prefHeight="274.0" prefWidth="509.0">
+        <columns>
+          <TableColumn fx:id="columnPlaca" prefWidth="127.0" text="Placa" />
+          <TableColumn fx:id="columnModelo" prefWidth="259.0" text="Modelo" />
+            <TableColumn fx:id="columnAno" prefWidth="122.0" text="Ano" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnImprirmir" layoutX="505.0" layoutY="513.0" mnemonicParsing="false" onAction="#impressao" prefHeight="25.0" prefWidth="72.0" text="Imprimir">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnPesquisar" layoutX="506.0" layoutY="23.0" mnemonicParsing="false" onAction="#pesquisar" text="Pesquisar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="cmbProprietario" layoutX="336.0" layoutY="89.0" onAction="#preencheProprietario" prefHeight="25.0" prefWidth="237.0" />
+   </children>
+</AnchorPane>

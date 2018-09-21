@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="589.0" prefWidth="605.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlefx.ProdutoFXMLController">
+    <stylesheets>
+        <URL value="@produtofxml.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="44.0" layoutY="27.0" text="Código:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="62.0" text="Nome:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="100.0" text="Marca:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="321.0" layoutY="100.0" text="Modelo:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="136.0" text="Quantidade:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="185.0" layoutY="136.0" text="Unidade:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigo" layoutX="92.0" layoutY="23.0" prefHeight="25.0" prefWidth="86.0" />
+      <TextField fx:id="txtNome" layoutX="92.0" layoutY="58.0" prefHeight="25.0" prefWidth="480.0" />
+      <TextField fx:id="txtMarca" layoutX="92.0" layoutY="96.0" prefHeight="25.0" prefWidth="225.0" />
+      <TextField fx:id="txtModelo" layoutX="373.0" layoutY="96.0" prefHeight="25.0" prefWidth="201.0" />
+      <TextField fx:id="txtQuantidade" layoutX="92.0" layoutY="132.0" prefHeight="25.0" prefWidth="86.0" />
+      <TextField fx:id="txtUnidade" layoutX="241.0" layoutY="132.0" prefHeight="25.0" prefWidth="77.0" />
+      <Button fx:id="btnAdicionar" layoutX="92.0" layoutY="191.0" mnemonicParsing="false" onAction="#adicionarProduto" text="Adicionar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnAtualizar" layoutX="170.0" layoutY="191.0" mnemonicParsing="false" onAction="#atualizarProduto" prefHeight="25.0" prefWidth="77.0" text="Atualizar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnExcluir" layoutX="254.0" layoutY="191.0" mnemonicParsing="false" onAction="#exlcluirProduto" prefHeight="25.0" prefWidth="77.0" text="Excluir">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnCancelar" layoutX="373.0" layoutY="191.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="25.0" prefWidth="77.0" text="Cancelar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TableView fx:id="tabelaProduto" layoutX="26.0" layoutY="243.0" prefHeight="289.0" prefWidth="548.0">
+        <columns>
+          <TableColumn fx:id="columnCodigo" prefWidth="75.0" text="Código" />
+          <TableColumn fx:id="columnNome" prefWidth="197.0" text="Nome" />
+            <TableColumn fx:id="columnModelo" prefWidth="183.0" text="Marca" />
+            <TableColumn fx:id="columnQuantidade" prefWidth="92.0" text="Quantidade" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

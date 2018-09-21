@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="511.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlefx.ServicoFXMLController">
+   <children>
+      <Label layoutX="22.0" layoutY="25.0" text="Código:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="61.0" text="Nome:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="95.0" text="Produto:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="404.0" layoutY="95.0" text="Preço:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigo" layoutX="70.0" layoutY="21.0" prefHeight="25.0" prefWidth="81.0" />
+      <TextField fx:id="txtNome" layoutX="70.0" layoutY="57.0" prefHeight="25.0" prefWidth="387.0" />
+      <TextField fx:id="txtPreco" layoutX="442.0" layoutY="91.0" prefHeight="25.0" prefWidth="107.0" />
+      <ComboBox fx:id="cmbProduto" layoutX="70.0" layoutY="91.0" onAction="#preencheProduto" prefHeight="25.0" prefWidth="255.0" />
+      <Button fx:id="btnPesquisar" layoutX="468.0" layoutY="57.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="81.0" text="Pesquisar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSalvar" layoutX="70.0" layoutY="136.0" mnemonicParsing="false" onAction="#salvarServico" prefHeight="25.0" prefWidth="74.0" text="Salvar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnAtualizar" layoutX="152.0" layoutY="136.0" mnemonicParsing="false" onAction="#atualizarServico" prefHeight="25.0" prefWidth="68.0" text="Atualizar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnExcluir" layoutX="229.0" layoutY="136.0" mnemonicParsing="false" onAction="#excluirServico" prefHeight="25.0" prefWidth="68.0" text="Excluir">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelar" layoutX="351.0" layoutY="136.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="25.0" prefWidth="81.0" text="Cancelar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tabelaServico" layoutX="45.0" layoutY="213.0" prefHeight="114.0" prefWidth="504.0">
+        <columns>
+          <TableColumn fx:id="columnCodigo" prefWidth="75.0" text="Código" />
+          <TableColumn fx:id="columnNome" prefWidth="320.0" text="Nome" />
+            <TableColumn fx:id="columnPreco" prefWidth="108.0" text="Preço" />
+        </columns>
+      </TableView>
+      <Label layoutX="47.0" layoutY="189.0" text="Serviços:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabelaProduto" layoutX="45.0" layoutY="366.0" prefHeight="114.0" prefWidth="504.0">
+         <columns>
+            <TableColumn fx:id="columnCodigos" prefWidth="75.0" text="Código" />
+            <TableColumn fx:id="columnNomes" prefWidth="320.0" text="Nome" />
+            <TableColumn fx:id="columnUnidade" prefWidth="108.0" text="Unidade" />
+         </columns>
+      </TableView>
+      <Label layoutX="47.0" layoutY="342.0" text="Produtos:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAdicionaProduto" layoutX="331.0" layoutY="91.0" mnemonicParsing="false" onAction="#adicionaProduto" prefHeight="23.0" prefWidth="50.0" text="ADD">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
