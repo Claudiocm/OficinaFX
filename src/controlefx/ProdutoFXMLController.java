@@ -86,6 +86,7 @@ public class ProdutoFXMLController implements Initializable {
 
         } else {
             alertas("Atenção", "Selecione um Produto");
+            atualizarTabela();
         }
     }
 
@@ -102,12 +103,13 @@ public class ProdutoFXMLController implements Initializable {
 
             produtoDao.atualizar(pro);
             tabelaProduto.getItems().setAll(produtos);
-            atualizarTabela();
 
             cancelar();
             alertas("Parabéns", "Produto atualizado com sucesso!");
+            atualizarTabela();
         } else {
             alertas("Atenção", "Selecione um Produto");
+            atualizarTabela();
         }
     }
 
@@ -117,12 +119,12 @@ public class ProdutoFXMLController implements Initializable {
 
         if (pro != null) {
             produtoDao.apagar(pro.getProId());
-            atualizarTabela();
             cancelar();
             alertas("Parabéns", "Produto excluido com sucesso!");
-
+            atualizarTabela();
         } else {
             alertas("Atenção", "Selecione um Produto");
+            atualizarTabela();
         }
     }
 

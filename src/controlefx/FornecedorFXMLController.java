@@ -112,8 +112,9 @@ public class FornecedorFXMLController implements Initializable {
             fornecedores.add(fornecedor);
             fornecedorDao.salvar(fornecedor);
             tabelaFornecedor.getItems().add(fornecedor);
-            atualizaTabela();
+           
             alertas("Parabéns", "Fornecedor atualizado com sucesso!");
+             atualizaTabela();
         } else {
             if (fantasia.trim().isEmpty()) {
                 txtFantasia.setText("Preencha com o nome Fantasia");
@@ -142,8 +143,9 @@ public class FornecedorFXMLController implements Initializable {
 
             fornecedorDao.atualizar(fornecedor);
             tabelaFornecedor.getItems().setAll(fornecedores);
-            atualizaTabela();
+           
             alertas("Parabéns", "Fornecedor atualizado com sucesso!");
+             atualizaTabela();
         } else {
             alertas("Atenção", "Selecione um fornecedor!");
         }
@@ -154,8 +156,9 @@ public class FornecedorFXMLController implements Initializable {
         Fornecedor fornecedor = tabelaFornecedor.getSelectionModel().getSelectedItem();
         if (fornecedor != null) {
             fornecedorDao.apagar(fornecedor.getForId());
-            atualizaTabela();
+           
             alertas("Parabéns", "Fornecedor excluido com sucesso!");
+             atualizaTabela();
         } else {
             alertas("Atenção", "Selecione um fornecedor!");
         }
