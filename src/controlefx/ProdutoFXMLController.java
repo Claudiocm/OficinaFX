@@ -97,7 +97,7 @@ public class ProdutoFXMLController implements Initializable {
             pro.setProNome(txtNome.getText());
             pro.setProMarca(txtMarca.getText());
             pro.setProModelo(txtModelo.getText());
-            pro.setProQuantidade(Integer.parseInt(txtQuantidade.getAccessibleHelp()));
+            pro.setProQuantidade(Integer.parseInt(txtQuantidade.getText()));
             pro.setProUnidade(txtUnidade.getText());
 
             produtoDao.atualizar(pro);
