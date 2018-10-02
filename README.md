@@ -1,2 +1,2 @@
-# consultas
-Projeto de Consultas em um escritório com JSF, PrimeFaces, MySQL
+#Aplicação em andamento
+Projeto de Oficina mecanica com JavaFX, MySQL e JPA.
